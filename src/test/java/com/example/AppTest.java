@@ -1,14 +1,13 @@
 package com.example;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-class AppTest {
+public class AppTest {
 
     @Test
-    void messageIsCorrect() {
-        String msg = App.getMessage();
-        assertEquals("Hello from Maven project!", msg);
+    public void testGetGreeting() {
+        String result = App.getGreeting();
+        assertEquals("Hello from Maven project!", result);
     }
 }

@@ -2,6 +2,10 @@ FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
-COPY target/demo-app-1.0-SNAPSHOT.jar app.jar
+# Copier le jar généré par Maven
+COPY target/*.jar app.jar
 
-ENTRYPOINT ["java", "-cp", "app.jar", "com.example.App"]
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+

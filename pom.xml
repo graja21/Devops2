@@ -33,7 +33,18 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <!-- Plugin qui transforme le jar en JAR exécutable Spring Boot -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
+
 
 
 

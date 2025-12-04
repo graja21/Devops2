@@ -4,10 +4,10 @@ import java.util.logging.Logger;
 
 public class App {
 
-    // Logger pour remplacer System.out.println
+    // Logger pour afficher les messages
     private static final Logger LOGGER = Logger.getLogger(App.class.getName());
 
-    // Constructeur privé pour empêcher l'instanciation (classe utilitaire)
+    // Constructeur privé (classe utilitaire)
     private App() {
         // rien
     }
@@ -17,9 +17,13 @@ public class App {
         return "Hello from Maven project!";
     }
 
-    public static void main(String[] args) {
-        // On affiche le message via le logger
+    public static void main(String[] args) throws Exception {
+        // Afficher le message
         LOGGER.info(getGreeting());
+
+        // Empêcher l'application de se terminer (important pour Kubernetes)
+        Thread.sleep(Long.MAX_VALUE);
     }
 }
+
 

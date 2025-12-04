@@ -39,7 +39,7 @@
             </executions>
         </plugin>
 
-        <!-- ✅ Rendre le jar exécutable avec la classe main -->
+        <!-- 🔥 Rendre le jar exécutable (fix "no main manifest attribute") -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
